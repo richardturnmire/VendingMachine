@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Vending Machine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./css/home.css" rel="stylesheet">
+
+
+</header>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12>">
+                <div class="panel panel-default ">
+                    <div class="panel-heading text-center">
+                        <h1 class="panel-title" style="font-size:22px"><strong>Vending Machine</strong></h1>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row equal">
+                            <div class="col-md-12">
+                                <div class="panel-group">
+                                    <!-- 
+                                        P r o d u c t   P a n e l
+                                    -->
+                                    <div class="panel panel-success col-md-9" id="product-groupx">
+                                        <table class="table table-bordered" id="product-table">
+                                            <tr id="product-group"></tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="panel panel-primary col-md-3" id="control-panel">
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="panel-group ">
+                                                    <!-- 
+                                                        M o n e y   P a n e l
+                                                     -->
+                                                    <div class="panel panel-warning" id="control-panel-top">
+                                                        <input type="hidden" id="total-quarters">
+                                                        <input type="hidden" id="total-dimes">
+                                                        <input type="hidden" id="total-nickels">
+
+                                                        <h3 class="text-center">Total $ In</h3>
+                                                        <p class="text-center">
+
+                                                            <input type="number" id="money-in" readonly>
+                                                        </p>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="btn-group  text-center btn-group-justified">
+                                                                    <div class="col-md-5">
+                                                                        <button id="add-dollar-btn" class="btn btn-primary btn-custom" onclick="addMoney(100)">Add $1</button>
+                                                                    </div>
+                                                                    <div class="col-md-5">
+                                                                        <button id="add-quarter-btn" class="btn btn-primary btn-custom" onclick="addMoney(25)">Add quarter</button>
+                                                                    </div>
+                                                                    <div class="col-md-5">
+                                                                        <button id="add-dime-btn" class="btn btn-primary btn-custom" onclick="addMoney(10)">Add diime</button>
+                                                                    </div>
+                                                                    <div class="col-md-5">
+                                                                        <button id="add-nickel-btn" class="btn btn-primary btn-custom" onclick="addMoney(5)">Add nickel</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                    </div>
+
+                                                    <!-- 
+                                                        M e s s a g e   P a n e l
+                                                     -->
+                                                    <div class="panel panel-info " id="control-panel-middle">
+                                                        <h3 class="text-center">Messages</h3>
+                                                        <div class="row">
+
+                                                            <div class="col-md-offset-1 col-md-10">
+                                                                <input type="text" id="messages" readonly>
+                                                            </div>
+
+
+                                                            <p class="col-md-4">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <label id="labelit" class="label label-primary label-as-badge col-md-offset-2 col-md-4" for="itemNumber">Item: </label>
+                                                                        <input type="number" id="itemNumber" class="col-md-3 text-right" readonly>
+                                                                    </div>
+                                                                </div>
+                                                            </p>
+
+
+                                                        </div>
+                                                        <p class="text-center">
+                                                            <button id="make-purchase-btn" class="btn btn-primary btn-custom2" onclick="makePurchase()">Make Purchase</button>
+                                                        </p>
+                                                    </div>
+
+
+                                                    <!-- 
+                                                        C h a n g e   P a n e l
+                                                    -->
+                                                    <div class="panel panel-danger" id="control-panel-bottom">
+
+                                                        <h3 class="text-center">Change</h3>
+                                                        <p class="text-center">
+
+                                                            <textarea id="changeAmt" rows="4" cols="25" readonly></textarea>
+                                                        </p>
+                                                        <p class="text-center">
+                                                            <button id="change-return-btn" class="btn btn-primary btn-custom2" onclick="returnChange()">Change Return</button>
+                                                        </p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- scripts -->
+    <script src="./js/jquery-2.2.4.min.js">
+    </script>
+
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
